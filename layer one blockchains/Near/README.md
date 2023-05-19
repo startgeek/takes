@@ -22,3 +22,7 @@ just imagine sharding as multiple parallel blockchains now near uses Async shard
 
 
 ### how to write smart contracts while keeping sharding satisfied:
+
+
+
+nonces are associated with access keys

@@ -1,0 +1,532 @@
+{
+	"info": {
+		"_postman_id": "df8d3abb-3d4b-4b52-8655-704d95ac85ee",
+		"name": "onMachina",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3077082"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "Show account details and list containers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "{{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.testnet.onmachina.io/v1/{{accountId}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"testnet",
+								"onmachina",
+								"io"
+							],
+							"path": [
+								"v1",
+								"{{accountId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create, update, or delete account metadata",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "{{authToken}}"
+							},
+							{
+								"key": "X-Account-Meta-Book",
+								"value": "{{X-Account-Meta-Book}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Account-Meta-Subject",
+								"value": "{{X-Account-Meta-Subject}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.testnet.onmachina.io/v1/{{accountId}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"testnet",
+								"onmachina",
+								"io"
+							],
+							"path": [
+								"v1",
+								"{{accountId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show account metadata",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "HEAD",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "{{authToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.testnet.onmachina.io/v1/{{accountId}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"testnet",
+								"onmachina",
+								"io"
+							],
+							"path": [
+								"v1",
+								"{{accountId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Containers",
+			"item": [
+				{
+					"name": "Show container details and list objects",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "{{authToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.testnet.onmachina.io/v1/{{accountId}}/{{containerName}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"testnet",
+								"onmachina",
+								"io"
+							],
+							"path": [
+								"v1",
+								"{{accountId}}",
+								"{{containerName}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create container",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "{{authToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.testnet.onmachina.io/v1/{{accountId}}/{{containerName2}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"testnet",
+								"onmachina",
+								"io"
+							],
+							"path": [
+								"v1",
+								"{{accountId}}",
+								"{{containerName2}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create, update, or delete container metadata",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "{{authToken}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Container-Meta-Century",
+								"value": "Nineteenth",
+								"type": "text"
+							},
+							{
+								"key": "X-Container-Meta-Web-Directory-Type",
+								"value": "text/directory",
+								"type": "text"
+							},
+							{
+								"key": "X-Container-Meta-Author",
+								"value": "notMarkTwainLOL",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.testnet.onmachina.io/v1/{{accountId}}/{{containerName2}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"testnet",
+								"onmachina",
+								"io"
+							],
+							"path": [
+								"v1",
+								"{{accountId}}",
+								"{{containerName2}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show container metadata",
+					"request": {
+						"method": "HEAD",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "{{authToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.testnet.onmachina.io/v1/{{accountId}}/{{containerName2}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"testnet",
+								"onmachina",
+								"io"
+							],
+							"path": [
+								"v1",
+								"{{accountId}}",
+								"{{containerName2}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show container metadata Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "{{authToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.testnet.onmachina.io/v1/{{accountId}}/{{containerName2}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"testnet",
+								"onmachina",
+								"io"
+							],
+							"path": [
+								"v1",
+								"{{accountId}}",
+								"{{containerName2}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Objects",
+			"item": [
+				{
+					"name": "Get object content and metadata",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-auth-token",
+								"value": "{{authToken}}",
+								"description": "changes every two hours ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.testnet.onmachina.io/v1/{{accountId}}/{{containerName}}/{{objectOne}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"testnet",
+								"onmachina",
+								"io"
+							],
+							"path": [
+								"v1",
+								"{{accountId}}",
+								"{{containerName}}",
+								"{{objectOne}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create or replace object",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-auth-token",
+								"value": "{{authToken}}",
+								"description": "changes every two hours ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.testnet.onmachina.io/v1/{{accountId}}/{{containerName}}/{{objectTwo}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"testnet",
+								"onmachina",
+								"io"
+							],
+							"path": [
+								"v1",
+								"{{accountId}}",
+								"{{containerName}}",
+								"{{objectTwo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Copy object",
+					"request": {
+						"method": "COPY",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "{{authToken}}"
+							},
+							{
+								"key": "Destination",
+								"value": "{{containerName}}/{{objectTwo}}2"
+							}
+						],
+						"url": {
+							"raw": "https://api.testnet.onmachina.io/v1/{{accountId}}/{{containerName}}/{{objectTwo}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"testnet",
+								"onmachina",
+								"io"
+							],
+							"path": [
+								"v1",
+								"{{accountId}}",
+								"{{containerName}}",
+								"{{objectTwo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete object",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-auth-token",
+								"value": "{{authToken}}",
+								"description": "changes every two hours ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.testnet.onmachina.io/v1/{{accountId}}/{{containerName}}/{{objectTwo}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"testnet",
+								"onmachina",
+								"io"
+							],
+							"path": [
+								"v1",
+								"{{accountId}}",
+								"{{containerName}}",
+								"{{objectTwo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show object metadata",
+					"request": {
+						"method": "HEAD",
+						"header": [
+							{
+								"key": "X-auth-token",
+								"value": "{{authToken}}",
+								"description": "changes every two hours ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.testnet.onmachina.io/v1/{{accountId}}/{{containerName}}/{{objectOne}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"testnet",
+								"onmachina",
+								"io"
+							],
+							"path": [
+								"v1",
+								"{{accountId}}",
+								"{{containerName}}",
+								"{{objectOne}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create or update object metadata",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "{{authToken}}"
+							},
+							{
+								"key": "X-Object-Meta-Book",
+								"value": "GoodbyeColumbus"
+							}
+						],
+						"url": {
+							"raw": "https://api.testnet.onmachina.io/v1/{{accountId}}/{{containerName}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"testnet",
+								"onmachina",
+								"io"
+							],
+							"path": [
+								"v1",
+								"{{accountId}}",
+								"{{containerName}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "accountId",
+			"value": "put your account id here",
+			"type": "string"
+		},
+		{
+			"key": "authToken",
+			"value": "put your key here remember it changes every two hour",
+			"type": "string"
+		},
+		{
+			"key": "X-Account-Meta-Book",
+			"value": "MobyDick"
+		},
+		{
+			"key": "X-Account-Meta-Subject",
+			"value": "Literature"
+		},
+		{
+			"key": "containerName",
+			"value": "testone"
+		},
+		{
+			"key": "containerName2",
+			"value": "testTwo"
+		},
+		{
+			"key": "objectOne",
+			"value": "sgalagaev--5iSCtrJX5o-unsplash.jpg"
+		},
+		{
+			"key": "objectTwo",
+			"value": "objectTwo"
+		}
+	]
+}
